@@ -3,28 +3,28 @@ import type { Metadata } from "next";
 
 // Metadados específicos para a página /termos-de-uso para SEO
 export const metadata: Metadata = {
-  title: "Termos de Uso | Fonomax Audição",
+  title: "Termos de Uso | FonoBR Audição", // Atualizado para FonoBR
   description:
-    "Leia os termos de uso e condições para utilização do site e serviços da Fonomax Audição.",
+    "Leia os termos de uso e condições para utilização do site e serviços da FonoBR.", // Atualizado para FonoBR
   keywords: [
     "termos de uso",
     "condições",
     "regras",
     "site",
     "serviços",
-    "Fonomax Audição",
+    "FonoBR", // Atualizado para FonoBR
   ],
   openGraph: {
-    title: "Termos de Uso | Fonomax Audição",
+    title: "Termos de Uso | FonoBR Audição", // Atualizado para FonoBR
     description: "Navegue pelas condições de uso do nosso site.",
-    url: "https://www.fonomax.com.br/termos-de-uso", // Atualize com a URL real do seu site
-    siteName: "Fonomax Audição",
+    url: "https://www.fonobr.com.br/termos-de-uso", // Atualizado para FonoBR
+    siteName: "FonoBR Audição", // Atualizado para FonoBR
     images: [
       {
         url: "/images/termos-og.jpg", // **Crie esta imagem em public/images/termos-og.jpg**
         width: 1200,
         height: 630,
-        alt: "Termos de Uso Fonomax Audição",
+        alt: "Termos de Uso FonoBR Audição", // Atualizado para FonoBR
       },
     ],
     type: "website",
@@ -51,8 +51,8 @@ export default function TermosDeUsoPage() {
             1. Aceitação dos Termos
           </h2>
           <p className="mb-4">
-            Ao acessar e usar o website da Fonomax Audição "o Site", você
-            concorda em cumprir e estar vinculado a estes Termos de Uso e a
+            Ao acessar e usar o website da FonoBR Audição &quot;o Site&quot;,
+            você concorda em cumprir e estar vinculado a estes Termos de Uso e a
             todas as leis e regulamentos aplicáveis. Se você não concordar com
             estes termos, por favor, não utilize o Site.
           </p>
@@ -61,7 +61,7 @@ export default function TermosDeUsoPage() {
             2. Modificações dos Termos
           </h2>
           <p className="mb-4">
-            A Fonomax Audição reserva-se o direito de revisar e alterar estes
+            A FonoBR Audição reserva-se o direito de revisar e alterar estes
             Termos de Uso a qualquer momento, sem aviso prévio. Ao usar este
             Site, você concorda em ficar vinculado à versão atual destes Termos
             de Uso. É sua responsabilidade verificar periodicamente as
@@ -99,7 +99,7 @@ export default function TermosDeUsoPage() {
             Todo o conteúdo presente no Site, incluindo, mas não se limitando a
             textos, gráficos, logotipos, ícones, imagens, clipes de áudio,
             downloads digitais, compilações de dados e software, é propriedade
-            da Fonomax Audição ou de seus provedores de conteúdo e é protegido
+            da FonoBR Audição ou de seus provedores de conteúdo e é protegido
             pelas leis de direitos autorais internacionais.
           </p>
 
@@ -107,18 +107,18 @@ export default function TermosDeUsoPage() {
             5. Isenção de Responsabilidade
           </h2>
           <p className="mb-4">
-            As informações neste Site são fornecidas "como estão" e "conforme
-            disponíveis". A Fonomax Audição não faz representações ou garantias
-            de qualquer tipo, expressas ou implícitas, quanto à operação deste
-            Site ou às informações, conteúdo, materiais ou produtos incluídos
-            neste Site.
+            As informações neste Site são fornecidas &quot;como estão&quot; e
+            &quot;conforme disponíveis&quot;. A FonoBR Audição não faz
+            representações ou garantias de qualquer tipo, expressas ou
+            implícitas, quanto à operação deste Site ou às informações,
+            conteúdo, materiais ou produtos incluídos neste Site.
           </p>
 
           <h2 className="text-3xl font-bold text-gray-800 mb-6 mt-8">
             6. Limitação de Responsabilidade
           </h2>
           <p className="mb-4">
-            A Fonomax Audição não será responsável por quaisquer danos de
+            A FonoBR Audição não será responsável por quaisquer danos de
             qualquer tipo decorrentes do uso deste Site, incluindo, mas não se
             limitando a danos diretos, indiretos, incidentais, punitivos e
             consequenciais.
@@ -129,7 +129,7 @@ export default function TermosDeUsoPage() {
           </h2>
           <p className="mb-4">
             Este Site pode conter links para sites de terceiros que não são de
-            propriedade ou controlados pela Fonomax Audição. Não temos controle
+            propriedade ou controlados pela FonoBR Audição. Não temos controle
             sobre e não assumimos responsabilidade pelo conteúdo, políticas de
             privacidade ou práticas de quaisquer sites de terceiros.
           </p>
@@ -150,7 +150,7 @@ export default function TermosDeUsoPage() {
             Se você tiver alguma dúvida sobre estes Termos de Uso, entre em
             contato conosco através do nosso formulário ou pelo e-mail:{" "}
             <a
-              href="mailto:contato@fonomax.com.br"
+              href="mailto:contato@fonobr.com.br" // Atualizado para FonoBR
               className="text-blue-600 hover:underline"
             >
               suporte@fonobr.com.br
