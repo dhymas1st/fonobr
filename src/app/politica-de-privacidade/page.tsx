@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Política de Privacidade | Fonomax Audição",
     description: "Entenda como protegemos seus dados pessoais.",
-    url: "https://www.fonomax.com.br/politica-de-privacidade", // Atualize com a URL real do seu site
+    url: "https://www.fonobr.com.br/politica-de-privacidade", // Atualize com a URL real do seu site
     siteName: "Fonomax Audição",
     images: [
       {
@@ -91,12 +91,12 @@ export default function PoliticaDePrivacidadePage() {
           </h3>
           <p className="mb-4">
             Também podemos coletar informações sobre como o Serviço é acessado e
-            usado "Dados de Uso". Esses Dados de Uso podem incluir informações
-            como o endereço de protocolo de internet do seu computador por
-            exemplo, endereço IP, tipo de navegador, versão do navegador, as
-            páginas do nosso Serviço que você visita, a hora e a data da sua
-            visita, o tempo gasto nessas páginas, identificadores exclusivos de
-            dispositivo e outros dados de diagnóstico.
+            usado &quot;Dados de Uso&quot;. Esses Dados de Uso podem incluir
+            informações como o endereço de protocolo de internet do seu
+            computador por exemplo, endereço IP, tipo de navegador, versão do
+            navegador, as páginas do nosso Serviço que você visita, a hora e a
+            data da sua visita, o tempo gasto nessas páginas, identificadores
+            exclusivos de dispositivo e outros dados de diagnóstico.
           </p>
 
           <h3 className="text-2xl font-bold text-gray-800 mb-4 mt-6">
@@ -222,7 +222,7 @@ export default function PoliticaDePrivacidadePage() {
               href="mailto:suporte@fonobr.com.br"
               className="text-blue-600 hover:underline"
             >
-              suporte@fonomax.com.br
+              suporte@fonobr.com.br
             </a>
             .
           </p>
