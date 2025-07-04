@@ -66,7 +66,10 @@ export default function ProductDetailPage({
 }: {
   params: { slug: string };
 }) {
-  const product = allProducts.find((p) => p.slug === params.slug);
+  // AQUI É A LINHA ALTERADA: Adicionando a tipagem explícita 'Product | undefined'
+  const product: Product | undefined = allProducts.find(
+    (p) => p.slug === params.slug
+  );
 
   if (!product) {
     // Renderiza uma página 404 customizada ou redireciona
