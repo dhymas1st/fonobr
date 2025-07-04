@@ -1,0 +1,10 @@
+/* src/app/globals.css */
+
+/* No Tailwind CSS v4, as diretivas @tailwind base, @tailwind components e @tailwind utilities
+   foram substituídas por uma única importação do pacote principal. */
+@import "tailwindcss";
+
+/*
+  Você ainda pode adicionar seus próprios estilos CSS globais aqui,
+  abaixo da importação do Tailwind.
+*/
