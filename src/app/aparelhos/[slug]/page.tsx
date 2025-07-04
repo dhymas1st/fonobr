@@ -2,27 +2,37 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { allProducts, Product } from "@/lib/products"; // Importar os dados dos produtos
+// Removendo 'Product' da desestruturação para evitar o erro 'defined but never used'
+// O tipo 'Product' será importado e usado apenas se for explicitamente necessário em uma declaração de tipo.
+import { allProducts } from "@/lib/products";
+// Se você realmente precisar do tipo Product, você o importa separadamente e o utiliza:
+import type { Product } from "@/lib/products"; // Importação do tipo se for usado explicitamente
+
 import { Check, Phone, MessageSquareText } from "lucide-react"; // Ícones para features/benefits
+
+// Definindo o tipo para os parâmetros da rota
+interface ProductPageParams {
+  slug: string;
+}
 
 // Função para gerar metadados dinâmicos para cada produto (SEO)
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: ProductPageParams;
 }): Promise<Metadata> {
   const product = allProducts.find((p) => p.slug === params.slug);
 
   if (!product) {
     return {
-      title: "Produto Não Encontrado | Fonomax Audição",
+      title: "Produto Não Encontrado | FonoBR Audição",
       description:
         "A página do produto que você está procurando não foi encontrada.",
     };
   }
 
   return {
-    title: `${product.name} | Fonomax Audição`,
+    title: `${product.name} | FonoBR Audição`,
     description: product.descriptionLong,
     keywords: [
       ...product.categories,
@@ -34,9 +44,9 @@ export async function generateMetadata({
       "São Paulo",
     ],
     openGraph: {
-      title: `${product.name} - Fonomax Audição`,
+      title: `${product.name} - FonoBR Audição`,
       description: product.descriptionLong,
-      url: `https://www.fonomax.com.br/aparelhos/${product.slug}`, // URL específica do produto
+      url: `https://www.fonobr.com.br/aparelhos/${product.slug}`, // URL específica do produto
       images: [
         {
           url: product.image, // Imagem principal do produto
@@ -64,12 +74,11 @@ export async function generateStaticParams() {
 export default function ProductDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: ProductPageParams; // Utilizando o tipo definido
 }) {
-  // AQUI É A LINHA ALTERADA: Adicionando a tipagem explícita 'Product | undefined'
-  const product: Product | undefined = allProducts.find(
-    (p) => p.slug === params.slug
-  );
+  // O TypeScript é inteligente o suficiente para inferir que 'product' terá o tipo 'Product | undefined'
+  // baseado no 'allProducts' e na operação 'find'.
+  const product = allProducts.find((p) => p.slug === params.slug);
 
   if (!product) {
     // Renderiza uma página 404 customizada ou redireciona
