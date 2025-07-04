@@ -1,6 +1,5 @@
 // src/app/politica-de-privacidade/page.tsx
 import type { Metadata } from "next";
-import Link from "next/link"; // Caso precise de links internos
 
 // Metadados específicos para a página /politica-de-privacidade para SEO
 export const metadata: Metadata = {
@@ -47,18 +46,16 @@ export default function PoliticaDePrivacidadePage() {
         </div>
       </section>
 
-      {/* Conteúdo da Política de Privacidade */}
       <section className="py-16 bg-white">
         <div className="container mx-auto max-w-7xl px-6 text-gray-700 leading-relaxed text-base md:text-lg">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             1. Introdução
           </h2>
           <p className="mb-4">
-            A Fonomax Audição ("nós", "nosso" ou "a Empresa") está comprometida
-            em proteger a privacidade e os dados pessoais de nossos usuários.
-            Esta Política de Privacidade descreve como coletamos, usamos e
-            compartilhamos suas informações pessoais quando você visita nosso
-            site www.fonomax.com.br.
+            A FonoBR está comprometida em proteger a privacidade e os dados
+            pessoais de nossos usuários. Esta Política de Privacidade descreve
+            como coletamos, usamos e compartilhamos suas informações pessoais
+            quando você visita nosso site www.fonobr.com.br.
           </p>
           <p className="mb-4">
             Ao utilizar nosso site e serviços, você concorda com a coleta e uso
@@ -78,15 +75,15 @@ export default function PoliticaDePrivacidadePage() {
           <p className="mb-4">
             Ao utilizar nosso Serviço, podemos solicitar que você nos forneça
             certas informações de identificação pessoal que podem ser usadas
-            para contatá-lo ou identificá-lo ("Dados Pessoais"). As informações
-            de identificação pessoal podem incluir, mas não estão limitadas a:
+            para contatá-lo ou identificá-lo. As informações de identificação
+            pessoal podem incluir, mas não estão limitadas a:
           </p>
           <ul className="list-disc list-inside mb-4">
             <li>Nome e Sobrenome</li>
             <li>Endereço de e-mail</li>
-            <li>Número de telefone (WhatsApp)</li>
+            <li>Número de telefone</li>
             <li>Endereço, Estado, Província, CEP, Cidade</li>
-            <li>Dados de uso (navegação no site)</li>
+            <li>Dados de uso</li>
           </ul>
 
           <h3 className="text-2xl font-bold text-gray-800 mb-4 mt-6">
@@ -94,9 +91,9 @@ export default function PoliticaDePrivacidadePage() {
           </h3>
           <p className="mb-4">
             Também podemos coletar informações sobre como o Serviço é acessado e
-            usado ("Dados de Uso"). Esses Dados de Uso podem incluir informações
-            como o endereço de protocolo de internet do seu computador (por
-            exemplo, endereço IP), tipo de navegador, versão do navegador, as
+            usado "Dados de Uso". Esses Dados de Uso podem incluir informações
+            como o endereço de protocolo de internet do seu computador por
+            exemplo, endereço IP, tipo de navegador, versão do navegador, as
             páginas do nosso Serviço que você visita, a hora e a data da sua
             visita, o tempo gasto nessas páginas, identificadores exclusivos de
             dispositivo e outros dados de diagnóstico.
@@ -171,11 +168,11 @@ export default function PoliticaDePrivacidadePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-gray-800 mb-6 mt-8">
-            6. Seus Direitos (LGPD)
+            6. Seus Direitos LGPD
           </h2>
           <p className="mb-4">
-            De acordo com a Lei Geral de Proteção de Dados (LGPD - Lei nº
-            13.709/2018), você possui direitos sobre seus dados pessoais,
+            De acordo com a Lei Geral de Proteção de Dados LGPD - Lei nº
+            13.709/2018, você possui direitos sobre seus dados pessoais,
             incluindo:
           </p>
           <ul className="list-disc list-inside mb-4">
@@ -222,15 +219,15 @@ export default function PoliticaDePrivacidadePage() {
             Se você tiver alguma dúvida sobre esta Política de Privacidade,
             entre em contato conosco através do nosso formulário ou pelo e-mail:{" "}
             <a
-              href="mailto:contato@fonomax.com.br"
+              href="mailto:suporte@fonobr.com.br"
               className="text-blue-600 hover:underline"
             >
-              contato@fonomax.com.br
+              suporte@fonomax.com.br
             </a>
             .
           </p>
           <p className="mt-8 text-sm text-gray-500">
-            Fonomax Audição, 2025. Todos os direitos reservados.
+            FonoBR, 2025. Todos os direitos reservados.
           </p>
         </div>
       </section>

@@ -1,6 +1,5 @@
 // src/app/termos-de-uso/page.tsx
 import type { Metadata } from "next";
-import Link from "next/link"; // Caso precise de links internos
 
 // Metadados específicos para a página /termos-de-uso para SEO
 export const metadata: Metadata = {
@@ -52,7 +51,7 @@ export default function TermosDeUsoPage() {
             1. Aceitação dos Termos
           </h2>
           <p className="mb-4">
-            Ao acessar e usar o website da Fonomax Audição ("o Site"), você
+            Ao acessar e usar o website da Fonomax Audição "o Site", você
             concorda em cumprir e estar vinculado a estes Termos de Uso e a
             todas as leis e regulamentos aplicáveis. Se você não concordar com
             estes termos, por favor, não utilize o Site.
@@ -154,12 +153,12 @@ export default function TermosDeUsoPage() {
               href="mailto:contato@fonomax.com.br"
               className="text-blue-600 hover:underline"
             >
-              contato@fonomax.com.br
+              suporte@fonobr.com.br
             </a>
             .
           </p>
           <p className="mt-8 text-sm text-gray-500">
-            Fonomax Audição, 2025. Todos os direitos reservados.
+            FonoBR, 2025. Todos os direitos reservados.
           </p>
         </div>
       </section>

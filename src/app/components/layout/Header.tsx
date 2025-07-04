@@ -1,7 +1,4 @@
-// src/components/layout/Header.tsx
 import Link from "next/link";
-import Image from "next/image";
-// Importe o ícone de menu do Lucide React para mobile
 import { Menu } from "lucide-react";
 
 const Header = () => {
