@@ -1,20 +1,14 @@
-// src/app/aparelhos/[slug]/page.tsx
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { allProducts } from "@/lib/products";
-import { Check, Phone, MessageSquareText } from "lucide-react"; // Ícones para features/benefits
+import { Check, Phone, MessageSquareText } from "lucide-react";
 
-// Removendo a interface ProductPageParams para simplificar a tipagem
-// interface ProductPageParams {
-//   slug: string;
-// }
-
-// Função para gerar metadados dinâmicos para cada produto (SEO)
+// SEO dinâmico
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }; // Tipando diretamente aqui
+  params: { slug: string };
 }): Promise<Metadata> {
   const product = allProducts.find((p) => p.slug === params.slug);
 
@@ -41,42 +35,38 @@ export async function generateMetadata({
     openGraph: {
       title: `${product.name} - FonoBR Audição`,
       description: product.descriptionLong,
-      url: `https://www.fonobr.com.br/aparelhos/${product.slug}`, // URL específica do produto
+      url: `https://www.fonobr.com.br/aparelhos/${product.slug}`,
       images: [
         {
-          url: product.image, // Imagem principal do produto
+          url: product.image,
           alt: product.name,
         },
         ...(product.images || []).map((imgUrl) => ({
           url: imgUrl,
           alt: product.name,
-        })), // Imagens da galeria
+        })),
       ],
-      type: "website", // Tipo Open Graph para produtos
+      type: "website",
     },
-    // Adicionar mais meta tags como twitter cards, etc.
   };
 }
 
-// Função para gerar paths estáticos para SSG (Static Site Generation)
-// Next.js vai pré-renderizar estas páginas no build time
+// Geração estática das rotas
 export async function generateStaticParams() {
   return allProducts.map((product) => ({
     slug: product.slug,
   }));
 }
 
-// Tipando diretamente o parâmetro 'params' dentro da função ProductDetailPage
-export default function ProductDetailPage({
+// ✅ Função corrigida (agora é async)
+export default async function ProductDetailPage({
   params,
 }: {
-  params: { slug: string }; // Tipando diretamente aqui
+  params: { slug: string };
 }) {
   const product = allProducts.find((p) => p.slug === params.slug);
 
   if (!product) {
-    // Renderiza uma página 404 customizada ou redireciona
-    // Para simplificar, vamos apenas mostrar uma mensagem
     return (
       <div className="container mx-auto max-w-7xl px-6 py-20 text-center min-h-[60vh] bg-gray-50">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -103,7 +93,7 @@ export default function ProductDetailPage({
           {product.name}
         </h1>
 
-        {/* Breadcrumbs (para acessibilidade e navegação) */}
+        {/* Breadcrumbs */}
         <nav className="text-sm text-gray-600 mb-8" aria-label="breadcrumb">
           <ol className="list-none p-0 inline-flex">
             <li className="flex items-center">
@@ -128,7 +118,7 @@ export default function ProductDetailPage({
         </nav>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-          {/* Imagem Principal e Galeria (Lado Esquerdo) */}
+          {/* Galeria de Imagens */}
           <div className="lg:w-1/2 w-full flex flex-col items-center">
             <div className="relative w-full h-[350px] md:h-[500px] mb-6 rounded-lg shadow-xl overflow-hidden">
               <Image
@@ -136,7 +126,7 @@ export default function ProductDetailPage({
                 alt={product.name}
                 fill
                 objectFit="contain"
-                priority // Carregamento prioritário para a imagem principal
+                priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -160,20 +150,18 @@ export default function ProductDetailPage({
             )}
           </div>
 
-          {/* Detalhes do Produto (Lado Direito) */}
+          {/* Detalhes do Produto */}
           <div className="lg:w-1/2 w-full">
             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
               {product.descriptionLong}
             </p>
 
-            {/* Preço (Opcional, se decidir exibir) */}
             {product.price && (
               <p className="text-3xl font-bold text-blue-700 mb-6">
                 {product.price}
               </p>
             )}
 
-            {/* Botões de Ação */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
                 href="/contato"
@@ -182,7 +170,7 @@ export default function ProductDetailPage({
                 <Phone size={20} className="mr-2" /> Solicitar Orçamento
               </Link>
               <Link
-                href="https://wa.me/5511987654321" // Substitua pelo seu WhatsApp
+                href="https://wa.me/5511987654321"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 w-full sm:w-auto"
