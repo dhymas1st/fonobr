@@ -1,21 +1,20 @@
 // src/app/aparelhos/[slug]/page.tsx
-import { Metadata } from "next"; // Removendo 'PageProps' daqui
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { allProducts } from "@/lib/products";
 import { Check, Phone, MessageSquareText } from "lucide-react"; // Ícones para features/benefits
 
-// Definindo o tipo para os parâmetros da rota explicitamente.
-// Não é necessário importar PageProps do 'next' neste cenário.
-interface ProductPageParams {
-  slug: string;
-}
+// Removendo a interface ProductPageParams para simplificar a tipagem
+// interface ProductPageParams {
+//   slug: string;
+// }
 
 // Função para gerar metadados dinâmicos para cada produto (SEO)
 export async function generateMetadata({
   params,
 }: {
-  params: ProductPageParams; // Tipando diretamente aqui
+  params: { slug: string }; // Tipando diretamente aqui
 }): Promise<Metadata> {
   const product = allProducts.find((p) => p.slug === params.slug);
 
@@ -67,11 +66,11 @@ export async function generateStaticParams() {
   }));
 }
 
-// Ajuste para tipar diretamente o parâmetro 'params'
+// Tipando diretamente o parâmetro 'params' dentro da função ProductDetailPage
 export default function ProductDetailPage({
   params,
 }: {
-  params: ProductPageParams; // Tipando diretamente aqui
+  params: { slug: string }; // Tipando diretamente aqui
 }) {
   const product = allProducts.find((p) => p.slug === params.slug);
 
