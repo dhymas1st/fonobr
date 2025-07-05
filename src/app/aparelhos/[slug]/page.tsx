@@ -1,12 +1,12 @@
 // src/app/aparelhos/[slug]/page.tsx
-import { Metadata } from "next";
+import { Metadata } from "next"; // Removendo 'PageProps' daqui
 import Image from "next/image";
 import Link from "next/link";
-// Removendo 'Product' da importação, pois o TypeScript pode inferir o tipo
 import { allProducts } from "@/lib/products";
 import { Check, Phone, MessageSquareText } from "lucide-react"; // Ícones para features/benefits
 
-// Definindo o tipo para os parâmetros da rota
+// Definindo o tipo para os parâmetros da rota explicitamente.
+// Não é necessário importar PageProps do 'next' neste cenário.
 interface ProductPageParams {
   slug: string;
 }
@@ -15,7 +15,7 @@ interface ProductPageParams {
 export async function generateMetadata({
   params,
 }: {
-  params: ProductPageParams;
+  params: ProductPageParams; // Tipando diretamente aqui
 }): Promise<Metadata> {
   const product = allProducts.find((p) => p.slug === params.slug);
 
@@ -67,10 +67,11 @@ export async function generateStaticParams() {
   }));
 }
 
+// Ajuste para tipar diretamente o parâmetro 'params'
 export default function ProductDetailPage({
   params,
 }: {
-  params: ProductPageParams; // Utilizando o tipo definido
+  params: ProductPageParams; // Tipando diretamente aqui
 }) {
   const product = allProducts.find((p) => p.slug === params.slug);
 
