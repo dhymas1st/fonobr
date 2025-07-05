@@ -1,11 +1,11 @@
 // src/app/aparelhos/[slug]/page.tsx
-
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { allProducts } from "@/lib/products";
 import { Check, Phone, MessageSquareText } from "lucide-react";
 
+// Função para gerar metadados dinâmicos
 export async function generateMetadata({
   params,
 }: {
@@ -42,23 +42,25 @@ export async function generateMetadata({
           url: product.image,
           alt: product.name,
         },
-        ...(product.images || []).map((imgUrl) => ({
+        ...((product.images ?? []).map((imgUrl) => ({
           url: imgUrl,
           alt: product.name,
-        })),
+        })) ?? []),
       ],
       type: "website",
     },
   };
 }
 
+// Geração de paths estáticos
 export async function generateStaticParams() {
   return allProducts.map((product) => ({
     slug: product.slug,
   }));
 }
 
-export default async function ProductDetailPage({
+// Página do Produto
+export default function ProductDetailPage({
   params,
 }: {
   params: { slug: string };
@@ -92,6 +94,7 @@ export default async function ProductDetailPage({
           {product.name}
         </h1>
 
+        {/* Breadcrumbs */}
         <nav className="text-sm text-gray-600 mb-8" aria-label="breadcrumb">
           <ol className="list-none p-0 inline-flex">
             <li className="flex items-center">
@@ -116,6 +119,7 @@ export default async function ProductDetailPage({
         </nav>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          {/* Galeria */}
           <div className="lg:w-1/2 w-full flex flex-col items-center">
             <div className="relative w-full h-[350px] md:h-[500px] mb-6 rounded-lg shadow-xl overflow-hidden">
               <Image
@@ -127,9 +131,9 @@ export default async function ProductDetailPage({
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            {product.images && product.images.length > 0 && (
+            {(product.images?.length ?? 0) > 0 && (
               <div className="flex flex-wrap gap-4 justify-center">
-                {product.images.map((imgUrl, index) => (
+                {product.images!.map((imgUrl, index) => (
                   <div
                     key={index}
                     className="relative w-24 h-24 rounded-md overflow-hidden border border-gray-200 hover:border-blue-600 transition-colors duration-200 cursor-pointer"
@@ -147,6 +151,7 @@ export default async function ProductDetailPage({
             )}
           </div>
 
+          {/* Detalhes */}
           <div className="lg:w-1/2 w-full">
             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
               {product.descriptionLong}
