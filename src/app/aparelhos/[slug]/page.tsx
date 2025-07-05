@@ -5,7 +5,7 @@ import Link from "next/link";
 import { allProducts } from "@/lib/products";
 import { Check, Phone, MessageSquareText } from "lucide-react";
 
-// Função para gerar metadados dinâmicos
+// Gerar metadados dinâmicos para SEO
 export async function generateMetadata({
   params,
 }: {
@@ -42,24 +42,24 @@ export async function generateMetadata({
           url: product.image,
           alt: product.name,
         },
-        ...((product.images ?? []).map((imgUrl) => ({
+        ...(product.images ?? []).map((imgUrl) => ({
           url: imgUrl,
           alt: product.name,
-        })) ?? []),
+        })),
       ],
       type: "website",
     },
   };
 }
 
-// Geração de paths estáticos
+// Gerar rotas estáticas
 export async function generateStaticParams() {
   return allProducts.map((product) => ({
     slug: product.slug,
   }));
 }
 
-// Página do Produto
+// Componente principal da página de produto
 export default function ProductDetailPage({
   params,
 }: {
@@ -119,7 +119,7 @@ export default function ProductDetailPage({
         </nav>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-          {/* Galeria */}
+          {/* Imagem Principal */}
           <div className="lg:w-1/2 w-full flex flex-col items-center">
             <div className="relative w-full h-[350px] md:h-[500px] mb-6 rounded-lg shadow-xl overflow-hidden">
               <Image
@@ -131,9 +131,9 @@ export default function ProductDetailPage({
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            {(product.images?.length ?? 0) > 0 && (
+            {product.images && product.images.length > 0 && (
               <div className="flex flex-wrap gap-4 justify-center">
-                {product.images!.map((imgUrl, index) => (
+                {product.images.map((imgUrl, index) => (
                   <div
                     key={index}
                     className="relative w-24 h-24 rounded-md overflow-hidden border border-gray-200 hover:border-blue-600 transition-colors duration-200 cursor-pointer"
@@ -151,7 +151,7 @@ export default function ProductDetailPage({
             )}
           </div>
 
-          {/* Detalhes */}
+          {/* Detalhes do Produto */}
           <div className="lg:w-1/2 w-full">
             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
               {product.descriptionLong}
@@ -163,12 +163,14 @@ export default function ProductDetailPage({
               </p>
             )}
 
+            {/* Botões de Ação */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
                 href="/contato"
                 className="inline-flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 w-full sm:w-auto"
               >
-                <Phone size={20} className="mr-2" /> Solicitar Orçamento
+                <Phone size={20} className="mr-2" />
+                Solicitar Orçamento
               </Link>
               <Link
                 href="https://wa.me/5511987654321"
@@ -176,12 +178,13 @@ export default function ProductDetailPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 w-full sm:w-auto"
               >
-                <MessageSquareText size={20} className="mr-2" /> Falar no
-                WhatsApp
+                <MessageSquareText size={20} className="mr-2" />
+                Falar no WhatsApp
               </Link>
             </div>
 
-            {product.features.length > 0 && (
+            {/* Características */}
+            {product.features?.length > 0 && (
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
                   Principais Características
@@ -200,7 +203,8 @@ export default function ProductDetailPage({
               </div>
             )}
 
-            {product.benefits.length > 0 && (
+            {/* Benefícios */}
+            {product.benefits?.length > 0 && (
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
                   Benefícios para Você
