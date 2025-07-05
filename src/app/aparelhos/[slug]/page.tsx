@@ -2,12 +2,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-// Removendo 'Product' da desestruturação para evitar o erro 'defined but never used'
-// O tipo 'Product' será importado e usado apenas se for explicitamente necessário em uma declaração de tipo.
+// Removendo 'Product' da importação, pois o TypeScript pode inferir o tipo
 import { allProducts } from "@/lib/products";
-// Se você realmente precisar do tipo Product, você o importa separadamente e o utiliza:
-import type { Product } from "@/lib/products"; // Importação do tipo se for usado explicitamente
-
 import { Check, Phone, MessageSquareText } from "lucide-react"; // Ícones para features/benefits
 
 // Definindo o tipo para os parâmetros da rota
@@ -76,8 +72,6 @@ export default function ProductDetailPage({
 }: {
   params: ProductPageParams; // Utilizando o tipo definido
 }) {
-  // O TypeScript é inteligente o suficiente para inferir que 'product' terá o tipo 'Product | undefined'
-  // baseado no 'allProducts' e na operação 'find'.
   const product = allProducts.find((p) => p.slug === params.slug);
 
   if (!product) {
