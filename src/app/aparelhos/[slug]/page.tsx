@@ -1,9 +1,9 @@
 // src/app/aparelhos/[slug]/page.tsx
 import { Metadata } from "next";
-import Image from "next/image";
+//import Image from "next/image";
 import Link from "next/link";
 import { allProducts } from "@/lib/products";
-import { Check, Phone, MessageSquareText } from "lucide-react";
+//import { Check, Phone, MessageSquareText } from "lucide-react";
 import { PageProps } from "@/app/types/PageProps"; // Caminho relativo correto
 
 export async function generateMetadata({
