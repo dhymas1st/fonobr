@@ -5,12 +5,16 @@ import Link from "next/link";
 import { allProducts } from "@/lib/products";
 import { Check, Phone, MessageSquareText } from "lucide-react";
 
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
 // Gerar metadados dinâmicos para SEO
 export async function generateMetadata({
   params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
   const product = allProducts.find((p) => p.slug === params.slug);
 
   if (!product) {
@@ -60,11 +64,7 @@ export async function generateStaticParams() {
 }
 
 // Componente principal da página de produto
-export default function ProductDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function ProductDetailPage({ params }: PageProps) {
   const product = allProducts.find((p) => p.slug === params.slug);
 
   if (!product) {
@@ -163,7 +163,6 @@ export default function ProductDetailPage({
               </p>
             )}
 
-            {/* Botões de Ação */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
                 href="/contato"
@@ -183,7 +182,6 @@ export default function ProductDetailPage({
               </Link>
             </div>
 
-            {/* Características */}
             {product.features?.length > 0 && (
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -203,7 +201,6 @@ export default function ProductDetailPage({
               </div>
             )}
 
-            {/* Benefícios */}
             {product.benefits?.length > 0 && (
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
