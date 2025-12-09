@@ -5,10 +5,10 @@
  */
 export interface HeroSlide {
   id: number;
-  image: string;
-  preTitle: string;
-  title: string;
-  description: string;
+  image: string; // Caminho para a imagem de fundo do slide
+  preTitle: string; // Parágrafo introdutório
+  title: string; // Título principal
+  description: string; // Descrição abaixo do título
   ctaButtonText: string;
   ctaButtonLink: string;
   secondaryButtonText: string;
@@ -16,17 +16,38 @@ export interface HeroSlide {
 }
 
 /**
- * Interface para um produto (aparelho auditivo) em destaque, com propriedades para filtragem e slug.
+ * Interface para as informações de um Acordeão.
+ */
+export interface AccordionItem {
+  title: string;
+  content: string[]; // Array de strings para parágrafos
+}
+
+/**
+ * Interface para um produto (aparelho auditivo) em destaque, com propriedades detalhadas para a página de produto.
  */
 export interface Product {
   id: number;
   name: string; // Título do modelo
-  image: string; // Caminho para a imagem do produto em public/images/products/
-  description: string; // Descrição curta
-  slug: string; // Slug para a URL (ex: "aparelho-retroauricular-ultra-power")
-  brand: string; // Marca do aparelho (ex: "Sonic Innovation", "Oticon")
-  type: string; // Tipo de aparelho (ex: "Retroauricular", "Intra-auricular", "Recarregável")
-  isFeatured: boolean; // <--- NOVA PROPRIEDADE: Indica se o produto está em destaque
+  image: string; // Caminho para a imagem principal (quadrada)
+  description: string; // Breve descrição
+  slug: string; // Slug para a URL
+  brand: string; // Marca
+  type: string; // Tipo de aparelho
+  isFeatured: boolean; // Se está em destaque na Home
+
+  // NOVOS CAMPOS PARA PÁGINA DE DETALHES
+  thumbImages: string[]; // Caminhos para as imagens menores da galeria
+  techSpecs: {
+    // Especificações na coluna da direita
+    tecnologia: string;
+    conectividade: string;
+    recursos: string;
+  };
+  accordion: {
+    informacoes: AccordionItem;
+    caracteristicas: AccordionItem;
+  };
 }
 
 /**

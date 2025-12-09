@@ -49,7 +49,7 @@ const PerdaAuditivaPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1
           id="perda-auditiva-heading"
-          className="text-4xl md:text-5xl font-extrabold text-center text-blue-700 mb-8"
+          className="text-4xl md:text-5xl font-extrabold text-center text-[#1d3f66] mb-8"
         >
           Entenda a Perda Auditiva
         </h1>
@@ -105,7 +105,7 @@ const PerdaAuditivaPage: React.FC = () => {
             {/* Tipo 1: Condutiva */}
             <div className="p-6 bg-blue-50 rounded-lg">
               <HiOutlineLightBulb
-                className="h-10 w-10 text-blue-600 mb-4 mx-auto md:mx-0"
+                className="h-10 w-10 text-[#1d3f66] mb-4 mx-auto md:mx-0"
                 aria-hidden="true"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center md:text-left">
@@ -122,7 +122,7 @@ const PerdaAuditivaPage: React.FC = () => {
             {/* Tipo 2: Neurossensorial */}
             <div className="p-6 bg-blue-50 rounded-lg">
               <HiOutlineChatBubbleLeftRight
-                className="h-10 w-10 text-blue-600 mb-4 mx-auto md:mx-0"
+                className="h-10 w-10 text-[#1d3f66] mb-4 mx-auto md:mx-0"
                 aria-hidden="true"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center md:text-left">
@@ -141,7 +141,7 @@ const PerdaAuditivaPage: React.FC = () => {
               {" "}
               {/* Ocupa as duas colunas em md e acima */}
               <HiOutlineUserGroup
-                className="h-10 w-10 text-blue-600 mb-4 mx-auto"
+                className="h-10 w-10 text-[#1d3f66] mb-4 mx-auto"
                 aria-hidden="true"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
@@ -158,7 +158,7 @@ const PerdaAuditivaPage: React.FC = () => {
         </div>
 
         {/* CTA para agendar consulta */}
-        <div className="text-center mt-16 p-8 bg-blue-600 text-white rounded-lg shadow-xl">
+        <div className="text-center mt-16 p-8 bg-[#1d3f66] text-white rounded-lg shadow-xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Suspeita de Perda Auditiva?
           </h2>
@@ -169,7 +169,7 @@ const PerdaAuditivaPage: React.FC = () => {
           </p>
           <Link
             href="/contato"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-75"
+            className="inline-block bg-white hover:bg-gray-100 text-[#1d3f66] font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-75"
             aria-label="Agendar uma avaliação auditiva gratuita"
           >
             Agende a Sua Avaliação

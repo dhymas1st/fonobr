@@ -47,7 +47,7 @@ const AparelhosPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1
           id="aparelhos-heading"
-          className="text-4xl md:text-5xl font-extrabold text-center text-blue-700 mb-8"
+          className="text-4xl md:text-5xl font-extrabold text-center text-[#1d3f66] mb-8"
         >
           Os Nossos Aparelhos Auditivos
         </h1>
@@ -127,7 +127,7 @@ const AparelhosPage: React.FC = () => {
               placeholder="Ex: Ultra Power"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-gray-800 placeholder-gray-400"
+              className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#1d3f66] focus:border-[#1d3f66] text-gray-800 placeholder-gray-400"
               aria-label="Pesquisar aparelho por nome ou descrição"
             />
           </div>
@@ -176,7 +176,7 @@ const AparelhosPage: React.FC = () => {
 
                 <Link
                   href={`/aparelhos/${product.slug}`}
-                  className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md text-base transition-colors duration-200 transform w-full text-center mt-4"
+                  className="inline-block bg-[#1d3f66] hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-md text-base transition-colors duration-200 transform w-full text-center mt-4"
                   aria-label={`Ver mais sobre ${product.name}`}
                 >
                   Ver Detalhes
@@ -191,7 +191,7 @@ const AparelhosPage: React.FC = () => {
         )}
 
         {/* CTA para agendar consulta */}
-        <div className="text-center mt-16 p-8 bg-blue-600 text-white rounded-lg shadow-xl">
+        <div className="text-center mt-16 p-8 bg-[#1d3f66] text-white rounded-lg shadow-xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Não sabe qual aparelho é o ideal para si?
           </h2>
@@ -202,7 +202,7 @@ const AparelhosPage: React.FC = () => {
           </p>
           <Link
             href="/contato"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-75"
+            className="inline-block bg-white hover:bg-gray-100 text-[#1d3f66] font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-75"
             aria-label="Agendar uma consulta gratuita"
           >
             Agende a Sua Consulta Gratuita

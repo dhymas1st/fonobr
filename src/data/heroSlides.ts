@@ -14,7 +14,7 @@ export const heroSlidesData: HeroSlide[] = [
     secondaryButtonText: "Agende uma Consulta",
     secondaryButtonLink: "/contato",
   },
-  {
+  /*{
     id: 2,
     image: "/images/hero-bg.jpg", // Pode usar imagens diferentes aqui se tiver
     preTitle: "Tecnologia que Transforma",
@@ -37,5 +37,5 @@ export const heroSlidesData: HeroSlide[] = [
     ctaButtonLink: "/contato",
     secondaryButtonText: "Sobre Nossa Equipa",
     secondaryButtonLink: "/sobre",
-  },
+  },*/
 ];

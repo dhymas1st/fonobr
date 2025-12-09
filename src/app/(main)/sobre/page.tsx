@@ -48,7 +48,7 @@ const SobrePage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1
           id="about-us-heading"
-          className="text-4xl md:text-5xl font-extrabold text-center text-blue-700 mb-8"
+          className="text-4xl md:text-5xl font-extrabold text-center text-[#1d3f66] mb-8"
         >
           A Nossa História e Compromisso
         </h1>
@@ -76,10 +76,10 @@ const SobrePage: React.FC = () => {
             </div>
             <div className="md:w-1/2 text-gray-700 text-lg leading-relaxed">
               <p className="mb-4">
-                Fundada em [Ano de Fundação, ex: 1998], a FonoBR nasceu com o
-                propósito de oferecer soluções auditivas de excelência e um
-                atendimento verdadeiramente humano. Ao longo de mais de duas
-                décadas, consolidámos a nossa presença no mercado, tornando-nos
+                Fundada em 1999, a FonoBR nasceu com o propósito de oferecer
+                soluções auditivas de excelência e um atendimento
+                verdadeiramente humano. Ao longo de mais de duas décadas,
+                consolidámos a nossa presença no mercado, tornando-nos
                 referência em saúde auditiva em São Paulo e Santo André.
               </p>
               <p className="mb-4">
@@ -104,7 +104,7 @@ const SobrePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center p-6 bg-blue-50 rounded-lg">
               <HiOutlineLightBulb
-                className="h-12 w-12 text-blue-600 mb-4"
+                className="h-12 w-12 text-[#1d3f66] mb-4"
                 aria-hidden="true"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -118,7 +118,7 @@ const SobrePage: React.FC = () => {
             </div>
             <div className="flex flex-col items-center p-6 bg-blue-50 rounded-lg">
               <HiOutlineChatBubbleLeftRight
-                className="h-12 w-12 text-blue-600 mb-4"
+                className="h-12 w-12 text-[#1d3f66] mb-4"
                 aria-hidden="true"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -131,7 +131,7 @@ const SobrePage: React.FC = () => {
             </div>
             <div className="flex flex-col items-center p-6 bg-blue-50 rounded-lg">
               <HiOutlineUserGroup
-                className="h-12 w-12 text-blue-600 mb-4"
+                className="h-12 w-12 text-[#1d3f66] mb-4"
                 aria-hidden="true"
               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -170,12 +170,51 @@ const SobrePage: React.FC = () => {
               </h4>
               <p className="text-sm text-gray-600">Fonoaudióloga Responsável</p>
             </div>
+            <div className="text-center">
+              <Image
+                src="/images/team-member-1.jpg" // Imagem de um membro da equipa
+                alt="Foto da Fonoaudióloga Ana Paula"
+                width={150}
+                height={150}
+                className="rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h4 className="text-lg font-semibold text-gray-900">
+                Ana Paula S. Dantas
+              </h4>
+              <p className="text-sm text-gray-600">Fonoaudióloga Responsável</p>
+            </div>
+            <div className="text-center">
+              <Image
+                src="/images/team-member-1.jpg" // Imagem de um membro da equipa
+                alt="Foto da Fonoaudióloga Ana Paula"
+                width={150}
+                height={150}
+                className="rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h4 className="text-lg font-semibold text-gray-900">
+                Ana Paula S. Dantas
+              </h4>
+              <p className="text-sm text-gray-600">Fonoaudióloga Responsável</p>
+            </div>
+            <div className="text-center">
+              <Image
+                src="/images/team-member-1.jpg" // Imagem de um membro da equipa
+                alt="Foto da Fonoaudióloga Ana Paula"
+                width={150}
+                height={150}
+                className="rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h4 className="text-lg font-semibold text-gray-900">
+                Ana Paula S. Dantas
+              </h4>
+              <p className="text-sm text-gray-600">Fonoaudióloga Responsável</p>
+            </div>
             {/* Adicione mais membros da equipa conforme necessário */}
           </div>
         </div>
 
         {/* CTA para agendar consulta */}
-        <div className="text-center mt-16 p-8 bg-blue-600 text-white rounded-lg shadow-xl">
+        <div className="text-center mt-16 p-8 bg-[#1d3f66] text-white rounded-lg shadow-xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Venha Conhecer a FonoBR!
           </h2>
@@ -186,10 +225,10 @@ const SobrePage: React.FC = () => {
           </p>
           <Link
             href="/contato"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-75"
+            className="inline-block bg-white hover:bg-gray-100 text-[#1d3f66] font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-75"
             aria-label="Agendar uma visita ou entrar em contacto"
           >
-            Fale Connosco
+            Fale Conosco
           </Link>
         </div>
       </div>

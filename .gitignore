@@ -1,36 +1,31 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Exclui pacotes de dependência
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
-# testing
-/coverage
-
-# next.js
+# Exclui a pasta de compilação do Next.js
 /.next/
 /out/
 
-# production
-/build
+# Exclui ficheiros de cache
+/npm-debug.log
+yarn-error.log
+/yarn-cache
+/package-lock.json # Se você usa npm, mantenha este. Se usar pnpm, ignore
+# Se você usa pnpm, mantenha /pnpm-lock.yaml e ignore este:
+# /pnpm-lock.yaml
 
-# misc
-.DS_Store
-*.pem
+# Exclui variáveis de ambiente e segredos
+# ESTE É OBRIGATÓRIO PARA SEGURANÇA!
+.env
+.env.local
+.env.development
+.env.production
+.vercel # Ficheiro de configuração do Vercel local
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
+# Exclui ficheiros gerados pelo TypeScript/IDE
 *.tsbuildinfo
-next-env.d.ts
+.DS_Store # macOS
+Thumbs.db # Windows
+.vscode # Configurações da IDE (opcional, mas recomendado)
+```eof

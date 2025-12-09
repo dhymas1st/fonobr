@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "agendar consulta",
   ],
   openGraph: {
-    title: "FonoBR Contacto | Fale Connosco em SP e Santo André",
+    title: "FonoBR Contato | Fale Conosco em SP e Santo André",
     description:
       "As nossas unidades em São Paulo e Santo André estão prontas para o atender. Descubra como chegar e agende o seu horário com a equipa FonoBR.",
     url: "https://www.fonobr.com.br/contato",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "https://www.fonobr.com.br/images/og-contact.jpg", // Crie uma imagem relevante para OG nesta pasta
         width: 1200,
         height: 630,
-        alt: "Imagem de contacto da FonoBR",
+        alt: "Imagem de contato da FonoBR",
       },
     ],
   },
@@ -50,9 +50,9 @@ const ContactPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1
           id="contact-main-heading"
-          className="text-4xl md:text-5xl font-extrabold text-center text-blue-700 mb-8"
+          className="text-4xl md:text-5xl font-extrabold text-center text-[#1d3f66] mb-8"
         >
-          Fale Connosco
+          Fale Conosco
         </h1>
 
         <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
               <HiOutlineMapPin
-                className="h-8 w-8 text-blue-600 mr-3"
+                className="h-8 w-8 text-[#1d3f66] mr-3"
                 aria-hidden="true"
               />
               São Paulo - Matriz
@@ -88,7 +88,7 @@ const ContactPage: React.FC = () => {
                 Telefone:{" "}
                 <a
                   href="tel:+551133334444"
-                  className="ml-2 text-blue-700 hover:underline transition duration-200"
+                  className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Ligar para telefone da FonoBR Matriz São Paulo"
                 >
                   (11) 3333-4444
@@ -104,7 +104,7 @@ const ContactPage: React.FC = () => {
                   href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20contacto%20com%20a%20Matriz%20de%20São%20Paulo."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 text-blue-700 hover:underline transition duration-200"
+                  className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar mensagem para FonoBR Matriz de São Paulo via WhatsApp"
                 >
                   (11) 99999-9999
@@ -114,10 +114,10 @@ const ContactPage: React.FC = () => {
                 E-mail:{" "}
                 <a
                   href="mailto:contacto.sp@fonobr.com.br"
-                  className="ml-2 text-blue-700 hover:underline transition duration-200"
+                  className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar e-mail para FonoBR Matriz de São Paulo"
                 >
-                  contacto.sp@fonobr.com.br
+                  contato@fonobr.com.br
                 </a>
               </p>
             </div>
@@ -143,7 +143,7 @@ const ContactPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
               <HiOutlineMapPin
-                className="h-8 w-8 text-blue-600 mr-3"
+                className="h-8 w-8 text-[#1d3f66] mr-3"
                 aria-hidden="true"
               />
               Santo André - Filial
@@ -164,7 +164,7 @@ const ContactPage: React.FC = () => {
                 Telefone:{" "}
                 <a
                   href="tel:+551155556666"
-                  className="ml-2 text-blue-700 hover:underline transition duration-200"
+                  className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Ligar para telefone da FonoBR Filial Santo André"
                 >
                   (11) 5555-6666
@@ -180,7 +180,7 @@ const ContactPage: React.FC = () => {
                   href="https://wa.me/5511988888888?text=Olá,%20gostaria%20de%20contacto%20com%20a%20Filial%20de%20Santo%20André."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 text-blue-700 hover:underline transition duration-200"
+                  className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar mensagem para FonoBR Filial de Santo André via WhatsApp"
                 >
                   (11) 98888-8888
@@ -190,10 +190,10 @@ const ContactPage: React.FC = () => {
                 E-mail:{" "}
                 <a
                   href="mailto:contacto.sa@fonobr.com.br"
-                  className="ml-2 text-blue-700 hover:underline transition duration-200"
+                  className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar e-mail para FonoBR Filial de Santo André"
                 >
-                  contacto.sa@fonobr.com.br
+                  contato@fonobr.com.br
                 </a>
               </p>
             </div>
@@ -242,7 +242,7 @@ const ContactPage: React.FC = () => {
                 name="full-name"
                 placeholder="Seu nome completo"
                 required
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[#1d3f66] focus:border-blue-900 transition duration-200 text-gray-900 placeholder-gray-500"
                 aria-required="true"
               />
             </div>
@@ -259,7 +259,7 @@ const ContactPage: React.FC = () => {
                 name="_replyto"
                 placeholder="seu.email@exemplo.com"
                 required
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[#1d3f66] focus:border-blue-900 transition duration-200 text-gray-900 placeholder-gray-500"
                 aria-required="true"
               />
             </div>
@@ -276,7 +276,7 @@ const ContactPage: React.FC = () => {
                 name="contact-phone"
                 placeholder="(XX) XXXXX-XXXX"
                 required
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[#1d3f66] focus:border-blue-900 transition duration-200 text-gray-900 placeholder-gray-500"
                 aria-required="true"
                 pattern="[0-9]{2}\s?[0-9]{4,5}-?[0-9]{4}"
                 title="Formato: XX XXXXX-XXXX ou XX XXXX-XXXX (com ou sem espaço/hífen)"
@@ -294,7 +294,7 @@ const ContactPage: React.FC = () => {
                 name="message"
                 rows={5}
                 placeholder="Digite sua mensagem aqui..."
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 text-gray-900 placeholder-gray-500 resize-y"
+                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-[#1d3f66] focus:border-blue-900 transition duration-200 text-gray-900 placeholder-gray-500 resize-y"
                 aria-label="Campo de mensagem"
               ></textarea>
             </div>
@@ -306,7 +306,7 @@ const ContactPage: React.FC = () => {
               </p>
               <button
                 type="submit"
-                className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
+                className="w-full bg-[#1d3f66] hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
                 aria-label="Enviar formulário de contacto"
               >
                 Enviar Mensagem

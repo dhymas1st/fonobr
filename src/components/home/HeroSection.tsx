@@ -68,7 +68,7 @@ const HeroSection: React.FC = () => {
           </p>
 
           {/* Título principal: 64px */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 md:mb-8 max-w-4xl drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-extrabold leading-tight mb-6 md:mb-8 max-w-4xl drop-shadow-lg">
             {currentSlide.title}
           </h1>
 

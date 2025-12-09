@@ -1,8 +1,10 @@
 // src/components/common/Header.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { HiOutlineBars3 } from "react-icons/hi2"; // Ícone de menu hamburguer dos Heroicons v2 via react-icons
 
 const Header: React.FC = () => {
+  const LOGO_PATH = "/images/logo-fono-br.png";
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,13 +14,14 @@ const Header: React.FC = () => {
         >
           {/* Logótipo da FonoBR */}
           <div className="flex-shrink-0">
-            <Link
-              href="/"
-              className="text-2xl font-bold text-blue-700"
-              aria-label="Página Inicial da FonoBR"
-            >
-              FonoBR
-            </Link>
+            <Image
+              src={LOGO_PATH}
+              alt="Logotipo FonoBR"
+              width={120} // Ajuste a largura conforme o design
+              height={40} // Ajuste a altura conforme o design
+              priority // Carregamento rápido
+              sizes="120px"
+            />
           </div>
 
           {/* Navegação principal (Desktop) */}
@@ -26,33 +29,33 @@ const Header: React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 href="/"
-                className="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300"
+                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
               >
                 Home
               </Link>
               <Link
                 href="/aparelhos"
-                className="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300"
+                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
               >
                 Aparelhos Auditivos {/* <--- ESTA LIGAÇÃO */}
               </Link>
               <Link
                 href="/perda-auditiva"
-                className="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300"
+                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
               >
                 Perda Auditiva
               </Link>
               <Link
                 href="/sobre"
-                className="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300"
+                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
               >
                 Sobre Nós
               </Link>
               <Link
                 href="/contato"
-                className="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition duration-300"
+                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
               >
-                Contacto
+                Contato
               </Link>
             </div>
           </div>
@@ -61,7 +64,7 @@ const Header: React.FC = () => {
           <div className="-mr-2 flex md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-[#1d3f66] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               aria-controls="mobile-menu"
               aria-expanded="false" // Este estado será controlado por JavaScript
               aria-label="Abrir menu principal"

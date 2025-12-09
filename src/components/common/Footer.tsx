@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         {/* Coluna 1: Texto Institucional */}
         <div>
           <h3 className="text-xl font-bold mb-4">FonoBR</h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <p className="text-gray-300 text-base leading-relaxed">
             Com mais de 25 anos de experiência, a FonoBR é especialista na venda
             de aparelhos auditivos, proporcionando qualidade de vida e bem-estar
             através de soluções personalizadas e tecnologia de ponta.
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 href="/"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               >
                 Home
               </Link>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 href="/aparelhos"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               >
                 Aparelhos Auditivos
               </Link>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 href="/perda-auditiva"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               >
                 Perda Auditiva
               </Link>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 href="/sobre"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               >
                 Sobre Nós
               </Link>
@@ -67,9 +67,9 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 href="/contato"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               >
-                Contacto
+                Contato
               </Link>
             </li>
           </ul>
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
               <FaFacebookSquare className="h-7 w-7" aria-hidden="true" />
             </a>
             <a
-              href="https://instagram.com/fonobr"
+              href="https://instagram.com/fono_br"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition duration-200"
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
               <FaLinkedinIn className="h-7 w-7" aria-hidden="true" />
             </a>
             <a
-              href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20FonoBR."
+              href="https://wa.me/5511913501313?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20FonoBR."
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition duration-200"
@@ -125,22 +125,23 @@ const Footer: React.FC = () => {
             {" "}
             {/* Acessibilidade: tag <address> */}
             <p className="font-semibold mb-1">São Paulo - Matriz</p>
-            <p className="text-gray-300 text-sm">Rua Exemplo, 123, Centro</p>
-            <p className="text-gray-300 text-sm">São Paulo, SP</p>
-            <p className="text-gray-300 text-sm">CEP 00000-000</p>
+            <p className="text-gray-300 text-base">
+              R. Afonso Sardinha, 95 - Sala 22
+            </p>
+            <p className="text-gray-300 text-base">Lapa, São Paulo - SP</p>
             <a
               href="tel:+551133334444"
-              className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+              className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               aria-label="Ligar para telefone da FonoBR Matriz São Paulo"
             >
-              (11) 3333-4444
+              (11) 91350-1313
             </a>
             <br />
             <a
-              href="https://www.google.com/maps/search/?api=1&query=FonoBR+São+Paulo+Rua+Exemplo,+123"
+              href="https://www.google.com/maps/search/?api=1&query=FonoBR+São+Paulo+R.+Afonso+Sardinha,+95+-+Sala+22,+Lapa,+São+Paulo+-+SP"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:underline text-sm"
+              className="text-blue-400 hover:underline text-base"
               aria-label="Ver FonoBR Matriz São Paulo no Google Maps"
             >
               Ver no Google Maps
@@ -150,22 +151,23 @@ const Footer: React.FC = () => {
             {" "}
             {/* Outra tag <address> */}
             <p className="font-semibold mb-1">Santo André - Filial</p>
-            <p className="text-gray-300 text-sm">Avenida Teste, 456, Bairro</p>
-            <p className="text-gray-300 text-sm">Cidade, Santo André, SP</p>
-            <p className="text-gray-300 text-sm">CEP 11111-111</p>
+            <p className="text-gray-300 text-base">R. Pôrto Alegre, 485.</p>
+            <p className="text-gray-300 text-base">
+              Vila Santa Teresa, Santo André - SP
+            </p>
             <a
               href="tel:+551155556666"
-              className="text-gray-300 hover:text-blue-400 transition duration-200 text-sm"
+              className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
               aria-label="Ligar para telefone da FonoBR Filial Santo André"
             >
-              (11) 5555-6666
+              (11) 91355-8470
             </a>
             <br />
             <a
-              href="https://www.google.com/maps/search/?api=1&query=FonoBR+Santo+André+Avenida+Teste,+456"
+              href="https://www.google.com/maps/search/?api=1&query=FonoBR+Santo+André+R.+Pôrto+Alegre,+485,+Vila+Santa+Teresa,+Santo+André+-+SP"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:underline text-sm"
+              className="text-blue-400 hover:underline text-base"
               aria-label="Ver FonoBR Filial Santo André no Google Maps"
             >
               Ver no Google Maps
