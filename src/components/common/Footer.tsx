@@ -1,4 +1,6 @@
-// src/components/common/Footer.tsx
+"use client"; // <--- ADICIONADO: Necessário para eventos de clique
+
+import React from "react";
 import Link from "next/link";
 import {
   FaFacebookSquare,
@@ -7,35 +9,42 @@ import {
 } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 
+const WHATSAPP_LINK =
+  "https://wa.me/5511999999999?text=Olá, gostaria de saber mais sobre os serviços da FonoBR.";
+
 const Footer: React.FC = () => {
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (
+      typeof window !== "undefined" &&
+      (window as any).gtag_report_conversion
+    ) {
+      (window as any).gtag_report_conversion(WHATSAPP_LINK);
+    } else {
+      window.open(WHATSAPP_LINK, "_blank");
+    }
+  };
+
   return (
     <footer
       className="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8"
       role="contentinfo"
     >
-      {" "}
-      {/* Acessibilidade: role="contentinfo" */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Coluna 1: Texto Institucional */}
         <div>
           <h3 className="text-xl font-bold mb-4">FonoBR</h3>
-          <p className="text-gray-300 text-base leading-relaxed">
-            Com mais de 25 anos de experiência, a FonoBR é especialista na venda
-            de aparelhos auditivos, proporcionando qualidade de vida e bem-estar
-            através de soluções personalizadas e tecnologia de ponta.
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Com mais de 25 anos de experiência...
           </p>
         </div>
 
-        {/* Coluna 2: Ligações Principais */}
         <nav aria-label="Ligações do Rodapé">
-          {" "}
-          {/* Acessibilidade: nav com aria-label */}
           <h3 className="text-xl font-bold mb-4">Ligações Úteis</h3>
           <ul className="space-y-2">
             <li>
               <Link
                 href="/"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
+                className="text-gray-300 hover:text-blue-400 text-sm"
               >
                 Home
               </Link>
@@ -43,39 +52,22 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 href="/aparelhos"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
+                className="text-gray-300 hover:text-blue-400 text-sm"
               >
                 Aparelhos Auditivos
               </Link>
             </li>
             <li>
               <Link
-                href="/perda-auditiva"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
-              >
-                Perda Auditiva
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/sobre"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
-              >
-                Sobre Nós
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/contato"
-                className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
+                className="text-gray-300 hover:text-blue-400 text-sm"
               >
-                Contato
+                Contacto
               </Link>
             </li>
           </ul>
         </nav>
 
-        {/* Coluna 3: Redes Sociais */}
         <div>
           <h3 className="text-xl font-bold mb-4">Siga-nos</h3>
           <div className="flex space-x-5">
@@ -83,94 +75,40 @@ const Footer: React.FC = () => {
               href="https://facebook.com/fonobr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition duration-200"
-              aria-label="Facebook da FonoBR"
+              className="text-gray-300 hover:text-blue-400"
             >
-              <FaFacebookSquare className="h-7 w-7" aria-hidden="true" />
+              <FaFacebookSquare className="h-7 w-7" />
             </a>
             <a
-              href="https://instagram.com/fono_br"
+              href="https://instagram.com/fonobr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition duration-200"
-              aria-label="Instagram da FonoBR"
+              className="text-gray-300 hover:text-blue-400"
             >
-              <FaInstagramSquare className="h-7 w-7" aria-hidden="true" />
+              <FaInstagramSquare className="h-7 w-7" />
             </a>
-            <a
-              href="https://linkedin.com/company/fonobr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition duration-200"
-              aria-label="LinkedIn da FonoBR"
-            >
-              <FaLinkedinIn className="h-7 w-7" aria-hidden="true" />
-            </a>
-            <a
-              href="https://wa.me/5511913501313?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20FonoBR."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition duration-200"
+
+            {/* ÍCONE WHATSAPP COM TRACKING */}
+            <button
+              onClick={handleWhatsAppClick}
+              className="text-gray-300 hover:text-green-400 transition duration-200"
               aria-label="WhatsApp da FonoBR"
             >
-              <SiWhatsapp className="h-7 w-7" aria-hidden="true" />
-            </a>
+              <SiWhatsapp className="h-7 w-7" />
+            </button>
           </div>
         </div>
 
-        {/* Coluna 4: Contacto e Endereços */}
         <div>
           <h3 className="text-xl font-bold mb-4">Unidades</h3>
           <address className="not-italic mb-6">
-            {" "}
-            {/* Acessibilidade: tag <address> */}
             <p className="font-semibold mb-1">São Paulo - Matriz</p>
-            <p className="text-gray-300 text-base">
-              R. Afonso Sardinha, 95 - Sala 22
-            </p>
-            <p className="text-gray-300 text-base">Lapa, São Paulo - SP</p>
+            <p className="text-gray-300 text-sm">Rua Exemplo, 123, Centro</p>
             <a
               href="tel:+551133334444"
-              className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
-              aria-label="Ligar para telefone da FonoBR Matriz São Paulo"
+              className="text-gray-300 hover:text-blue-400 text-sm"
             >
-              (11) 91350-1313
-            </a>
-            <br />
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=FonoBR+São+Paulo+R.+Afonso+Sardinha,+95+-+Sala+22,+Lapa,+São+Paulo+-+SP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline text-base"
-              aria-label="Ver FonoBR Matriz São Paulo no Google Maps"
-            >
-              Ver no Google Maps
-            </a>
-          </address>
-          <address className="not-italic">
-            {" "}
-            {/* Outra tag <address> */}
-            <p className="font-semibold mb-1">Santo André - Filial</p>
-            <p className="text-gray-300 text-base">R. Pôrto Alegre, 485.</p>
-            <p className="text-gray-300 text-base">
-              Vila Santa Teresa, Santo André - SP
-            </p>
-            <a
-              href="tel:+551155556666"
-              className="text-gray-300 hover:text-blue-400 transition duration-200 text-base"
-              aria-label="Ligar para telefone da FonoBR Filial Santo André"
-            >
-              (11) 91355-8470
-            </a>
-            <br />
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=FonoBR+Santo+André+R.+Pôrto+Alegre,+485,+Vila+Santa+Teresa,+Santo+André+-+SP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline text-base"
-              aria-label="Ver FonoBR Filial Santo André no Google Maps"
-            >
-              Ver no Google Maps
+              (11) 3333-4444
             </a>
           </address>
         </div>
