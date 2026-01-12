@@ -193,7 +193,7 @@ const AparelhosPage: React.FC = () => {
         {/* CTA para agendar consulta */}
         <div className="text-center mt-16 p-8 bg-[#1d3f66] text-white rounded-lg shadow-xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Não sabe qual aparelho é o ideal para si?
+            Não sabe qual aparelho é o ideal para você?
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
             Agende uma consulta gratuita com os nossos especialistas em

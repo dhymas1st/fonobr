@@ -56,7 +56,7 @@ const ContactFormSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               {/* Botão Ligar Agora - Cor de fundo branca, texto azul */}
               <a
-                href="tel:+5511999999999" // Substitua pelo número de telefone real
+                href="tel:+5511913501313" // Substitua pelo número de telefone real
                 className="flex items-center justify-center bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-6 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 text-lg"
                 aria-label="Ligar agora para a FonoBR"
               >
@@ -66,7 +66,7 @@ const ContactFormSection: React.FC = () => {
 
               {/* Botão WhatsApp - Cor de fundo do rodapé (gray-800), texto branco */}
               <a
-                href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20aparelhos%20auditivos." // Substitua pelo número de WhatsApp real e mensagem pré-preenchida
+                href="https://wa.me/5511913501313?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20aparelhos%20auditivos." // Substitua pelo número de WhatsApp real e mensagem pré-preenchida
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center bg-green-700 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-600 focus:ring-opacity-50 text-lg"
