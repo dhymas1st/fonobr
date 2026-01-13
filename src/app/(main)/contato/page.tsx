@@ -124,8 +124,9 @@ const ContactPage: React.FC = () => {
             {/* Mapa Google Maps (placeholder) */}
             <div className="mt-8 h-64 bg-gray-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center text-gray-500">
               {/* Substitua por um iframe real do Google Maps */}
+              
               <iframe
-                src="https://www.google.com/maps/search/?api=1&query=FonoBR+S%C3%A3o+Paulo+R.+Afonso+Sardinha,+95+-+Sala+22,+Lapa,+S%C3%A3o+Paulo+-+SP"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.28249935653!2d-46.704791199999995!3d-23.5223397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef941a8d4590b%3A0x5cd7ac2a2249a299!2sFono%20BR%20-%20Aparelhos%20Auditivos%20-%20Lapa!5e0!3m2!1spt-BR!2sbr!4v1768310595697!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -149,11 +150,11 @@ const ContactPage: React.FC = () => {
               Santo André - Filial
             </h2>
             <address className="not-italic text-gray-700 text-lg leading-relaxed mb-6">
-              Avenida Teste, 456, Bairro
+              R. Pôrto Alegre, 485.
               <br />
-              Cidade, Santo André, SP
+              Vila Santa Teresa, Santo André - SP
               <br />
-              CEP 11111-111
+              CEP: 09030-610
             </address>
             <div className="space-y-4">
               <p className="flex items-center text-gray-800 text-lg">
@@ -163,11 +164,11 @@ const ContactPage: React.FC = () => {
                 />
                 Telefone:{" "}
                 <a
-                  href="tel:+551155556666"
+                  href="tel:+5511913558470"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Ligar para telefone da FonoBR Filial Santo André"
                 >
-                  (11) 5555-6666
+                  (11) 91355-8470
                 </a>
               </p>
               <p className="flex items-center text-gray-800 text-lg">
@@ -177,13 +178,13 @@ const ContactPage: React.FC = () => {
                 />
                 WhatsApp:{" "}
                 <a
-                  href="https://wa.me/5511988888888?text=Olá,%20gostaria%20de%20contato%20com%20a%20Filial%20de%20Santo%20André."
+                  href="https://wa.me/5511913558470?text=Olá,%20gostaria%20de%20contato%20com%20a%20Filial%20de%20Santo%20André."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar mensagem para FonoBR Filial de Santo André via WhatsApp"
                 >
-                  (11) 98888-8888
+                  (11) 913558470
                 </a>
               </p>
               <p className="flex items-center text-gray-800 text-lg">
@@ -200,7 +201,7 @@ const ContactPage: React.FC = () => {
             {/* Mapa Google Maps (placeholder) */}
             <div className="mt-8 h-64 bg-gray-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center text-gray-500">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15312.345678901234!2d-46.6333096!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a35e4e5e49%3A0x6b8d9e6e5a6b7c8d!2sSanto%20Andr%C3%A9%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1678901234567!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.186638214908!2d-46.530655249999995!3d-23.66928265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce439ebf640739%3A0xe2709545f7555495!2sFono%20BR%20-%20Aparelhos%20Auditivos%20-%20Santo%20Andr%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1768316172046!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
