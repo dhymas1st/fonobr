@@ -6,15 +6,15 @@ import {
   HiOutlinePhone,
   HiOutlineChatBubbleBottomCenterText,
   HiOutlineMapPin,
-} from "react-icons/hi2"; // Ícones para contacto e mapa
+} from "react-icons/hi2"; // Ícones para contato e mapa
 
 // SEO e Acessibilidade: Metadados específicos para esta página
 export const metadata: Metadata = {
-  title: "Contacto FonoBR - Unidades em São Paulo e Santo André",
+  title: "Contato FonoBR - Unidades em São Paulo e Santo André",
   description:
-    "Entre em contacto com a FonoBR em São Paulo e Santo André. Agende a sua consulta, tire dúvidas sobre aparelhos auditivos e receba suporte especializado. Telefone, WhatsApp, E-mail e Endereços.",
+    "Entre em contato com a FonoBR em São Paulo e Santo André. Agende a sua consulta, tire dúvidas sobre aparelhos auditivos e receba suporte especializado. Telefone, WhatsApp, E-mail e Endereços.",
   keywords: [
-    "contacto FonoBR",
+    "contato FonoBR",
     "telefone FonoBR",
     "whatsapp FonoBR",
     "endereço FonoBR",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 const ContactPage: React.FC = () => {
-  // Endpoint do Formspree para o formulário principal da página de contacto
+  // Endpoint do Formspree para o formulário principal da página de contato
   const FORMSPREE_ENDPOINT = "https://formspree.io/f/xyzjqkzd"; // <--- SEU ENDPOINT REAL AQUI!
 
   return (
@@ -57,11 +57,11 @@ const ContactPage: React.FC = () => {
 
         <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
           Temos duas unidades para melhor o atender: uma matriz em São Paulo e
-          uma filial em Santo André. Escolha a forma de contacto que for mais
-          conveniente para si.
+          uma filial em Santo André. Escolha a forma de contato que for mais
+          conveniente para você.
         </p>
 
-        {/* Secção de Unidades e Contactos Diretos */}
+        {/* Secção de Unidades e Contatos Diretos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Unidade São Paulo - Matriz */}
           <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
@@ -73,11 +73,11 @@ const ContactPage: React.FC = () => {
               São Paulo - Matriz
             </h2>
             <address className="not-italic text-gray-700 text-lg leading-relaxed mb-6">
-              Rua Exemplo, 123, Centro
+              R. Afonso Sardinha, 95 - Sala 22
               <br />
-              Bairro, São Paulo, SP
+              Lapa, São Paulo - SP
               <br />
-              CEP 00000-000
+              CEP: 05076-000
             </address>
             <div className="space-y-4">
               <p className="flex items-center text-gray-800 text-lg">
@@ -87,11 +87,11 @@ const ContactPage: React.FC = () => {
                 />
                 Telefone:{" "}
                 <a
-                  href="tel:+551133334444"
+                  href="tel:+5511913501313"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Ligar para telefone da FonoBR Matriz São Paulo"
                 >
-                  (11) 3333-4444
+                  (11) 91350-1313
                 </a>
               </p>
               <p className="flex items-center text-gray-800 text-lg">
@@ -101,19 +101,19 @@ const ContactPage: React.FC = () => {
                 />
                 WhatsApp:{" "}
                 <a
-                  href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20contacto%20com%20a%20Matriz%20de%20São%20Paulo."
+                  href="https://wa.me/5511913501313?text=Olá,%20gostaria%20de%20contato%20com%20a%20Matriz%20de%20São%20Paulo."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar mensagem para FonoBR Matriz de São Paulo via WhatsApp"
                 >
-                  (11) 99999-9999
+                  (11) 91350-1313
                 </a>
               </p>
               <p className="flex items-center text-gray-800 text-lg">
                 E-mail:{" "}
                 <a
-                  href="mailto:contacto.sp@fonobr.com.br"
+                  href="mailto:contato@fonobr.com.br"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar e-mail para FonoBR Matriz de São Paulo"
                 >
@@ -125,7 +125,7 @@ const ContactPage: React.FC = () => {
             <div className="mt-8 h-64 bg-gray-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center text-gray-500">
               {/* Substitua por um iframe real do Google Maps */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15312.345678901234!2d-46.6333096!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a35e4e5e49%3A0x6b8d9e6e5a6b7c8d!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1678901234567!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/search/?api=1&query=FonoBR+S%C3%A3o+Paulo+R.+Afonso+Sardinha,+95+-+Sala+22,+Lapa,+S%C3%A3o+Paulo+-+SP"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -177,7 +177,7 @@ const ContactPage: React.FC = () => {
                 />
                 WhatsApp:{" "}
                 <a
-                  href="https://wa.me/5511988888888?text=Olá,%20gostaria%20de%20contacto%20com%20a%20Filial%20de%20Santo%20André."
+                  href="https://wa.me/5511988888888?text=Olá,%20gostaria%20de%20contato%20com%20a%20Filial%20de%20Santo%20André."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
@@ -189,7 +189,7 @@ const ContactPage: React.FC = () => {
               <p className="flex items-center text-gray-800 text-lg">
                 E-mail:{" "}
                 <a
-                  href="mailto:contacto.sa@fonobr.com.br"
+                  href="mailto:contato.sa@fonobr.com.br"
                   className="ml-2 text-[#1d3f66] hover:underline transition duration-200"
                   aria-label="Enviar e-mail para FonoBR Filial de Santo André"
                 >
@@ -215,14 +215,14 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Formulário de Contacto (Reutilizado da Home, mas aqui em secção completa) */}
+        {/* Formulário de Contato (Reutilizado da Home, mas aqui em secção completa) */}
         <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
             Envie-nos uma Mensagem
           </h2>
           <p className="text-lg text-gray-700 text-center mb-8 max-w-2xl mx-auto leading-relaxed">
             Se preferir, preencha o formulário abaixo e retornaremos o seu
-            contacto o mais breve possível.
+            contato o mais breve possível.
           </p>
           <form
             action={FORMSPREE_ENDPOINT}
@@ -307,7 +307,7 @@ const ContactPage: React.FC = () => {
               <button
                 type="submit"
                 className="w-full bg-[#1d3f66] hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
-                aria-label="Enviar formulário de contacto"
+                aria-label="Enviar formulário de contato"
               >
                 Enviar Mensagem
               </button>
