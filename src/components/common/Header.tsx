@@ -1,85 +1,58 @@
-// src/components/common/Header.tsx
-import Link from "next/link";
-import Image from "next/image";
-import { HiOutlineBars3 } from "react-icons/hi2"; // Ícone de menu hamburguer dos Heroicons v2 via react-icons
+"use client"; // Necessário no Next.js App Router para usar hooks como useState
 
-const Header: React.FC = () => {
-  const LOGO_PATH = "/images/logo-fono-br.png";
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Função para fechar o menu ao clicar em um link
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav
-          className="flex justify-between items-center h-16"
-          aria-label="Navegação Principal"
-        >
-          {/* Logótipo da FonoBR */}
-          <div className="flex-shrink-0">
-            <Image
-              src={LOGO_PATH}
-              alt="Logotipo FonoBR"
-              width={120} // Ajuste a largura conforme o design
-              height={40} // Ajuste a altura conforme o design
-              priority // Carregamento rápido
-              sizes="120px"
-            />
-          </div>
+    <header className="fixed w-full z-50 bg-white shadow-md">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        
+        {/* Logo - Ajuste o caminho da imagem conforme seu projeto */}
+        <Link href="/" className="flex items-center" onClick={closeMenu}>
+          <Image 
+            src="/images/logo-fonobr.png" 
+            alt="Logo Fono BR" 
+            width={150} 
+            height={50} 
+            priority
+          />
+        </Link>
 
-          {/* Navegação principal (Desktop) */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <Link
-                href="/"
-                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
-              >
-                Home
-              </Link>
-              <Link
-                href="/aparelhos"
-                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
-              >
-                Aparelhos Auditivos {/* <--- ESTA LIGAÇÃO */}
-              </Link>
-              <Link
-                href="/perda-auditiva"
-                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
-              >
-                Perda Auditiva
-              </Link>
-              <Link
-                href="/sobre"
-                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
-              >
-                Sobre Nós
-              </Link>
-              <Link
-                href="/contato"
-                className="text-gray-600 hover:text-[#1d3f66] px-3 py-2 rounded-md text-base font-medium transition duration-300"
-              >
-                Contato
-              </Link>
-            </div>
-          </div>
-
-          {/* Menu Hamburguer (Mobile) */}
-          <div className="-mr-2 flex md:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-[#1d3f66] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-              aria-controls="mobile-menu"
-              aria-expanded="false" // Este estado será controlado por JavaScript
-              aria-label="Abrir menu principal"
-            >
-              <HiOutlineBars3 className="block h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
+        {/* Menu Desktop */}
+        <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
+          <Link href="/" className="hover:text-blue-600 transition">Início</Link>
+          <Link href="#servicos" className="hover:text-blue-600 transition">Serviços</Link>
+          <Link href="#sobre" className="hover:text-blue-600 transition">Sobre</Link>
+          <Link href="#contato" className="hover:text-blue-600 transition text-blue-600 border border-blue-600 px-4 py-1 rounded-full">Contato</Link>
         </nav>
+
+        {/* Botão Hambúrguer (Mobile) */}
+        <button 
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Abrir menu"
+        >
+          <span className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-600 my-1 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+        </button>
       </div>
 
-      {/* Menu móvel (será implementado com lógica de estado posteriormente) */}
-      <div className="md:hidden" id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {/* Ligações do menu móvel aqui */}
-        </div>
+      {/* Menu Mobile (Dropdown) */}
+      <div className={`md:hidden bg-white w-full absolute left-0 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-200px] opacity-0 pointer-events-none'}`}>
+        <nav className="flex flex-col p-6 space-y-4 text-center font-medium border-t border-gray-100">
+          <Link href="/" onClick={closeMenu} className="py-2 hover:bg-gray-50">Início</Link>
+          <Link href="#servicos" onClick={closeMenu} className="py-2 hover:bg-gray-50">Serviços</Link>
+          <Link href="#sobre" onClick={closeMenu} className="py-2 hover:bg-gray-50">Sobre</Link>
+          <Link href="#contato" onClick={closeMenu} className="py-2 bg-blue-600 text-white rounded-md">Fale Conosco</Link>
+        </nav>
       </div>
     </header>
   );
