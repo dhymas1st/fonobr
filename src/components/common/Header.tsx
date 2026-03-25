@@ -13,14 +13,14 @@ const Header = () => {
   return (
     <header className="fixed w-full z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        
+
         {/* Logo - Ajuste o caminho da imagem conforme seu projeto */}
         <Link href="/" className="flex items-center" onClick={closeMenu}>
-          <Image 
-            src="/images/logo-fonobr.png" 
-            alt="Logo Fono BR" 
-            width={150} 
-            height={50} 
+          <Image
+            src="/images/logo-fono-br.png"
+            alt="Logo Fono BR"
+            width={150}
+            height={50}
             priority
           />
         </Link>
@@ -28,13 +28,13 @@ const Header = () => {
         {/* Menu Desktop */}
         <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
           <Link href="/" className="hover:text-blue-600 transition">Início</Link>
-          <Link href="#servicos" className="hover:text-blue-600 transition">Serviços</Link>
-          <Link href="#sobre" className="hover:text-blue-600 transition">Sobre</Link>
-          <Link href="#contato" className="hover:text-blue-600 transition text-blue-600 border border-blue-600 px-4 py-1 rounded-full">Contato</Link>
+          <Link href="aparelhos" className="hover:text-blue-600 transition">Aparelhos Auditivos</Link>
+          <Link href="sobre" className="hover:text-blue-600 transition">Sobre</Link>
+          <Link href="contato" className="hover:text-blue-600 transition text-blue-600 border border-blue-600 px-4 py-1 rounded-full">Contato</Link>
         </nav>
 
         {/* Botão Hambúrguer (Mobile) */}
-        <button 
+        <button
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Abrir menu"
@@ -46,12 +46,12 @@ const Header = () => {
       </div>
 
       {/* Menu Mobile (Dropdown) */}
-      <div className={`md:hidden bg-white w-full absolute left-0 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-200px] opacity-0 pointer-events-none'}`}>
-        <nav className="flex flex-col p-6 space-y-4 text-center font-medium border-t border-gray-100">
-          <Link href="/" onClick={closeMenu} className="py-2 hover:bg-gray-50">Início</Link>
-          <Link href="#servicos" onClick={closeMenu} className="py-2 hover:bg-gray-50">Serviços</Link>
-          <Link href="#sobre" onClick={closeMenu} className="py-2 hover:bg-gray-50">Sobre</Link>
-          <Link href="#contato" onClick={closeMenu} className="py-2 bg-blue-600 text-white rounded-md">Fale Conosco</Link>
+      <div className={`md:hidden bg-white w-full absolute left-0 shadow-xl transition-all duration-300 ease-in-out ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-300px] opacity-0 pointer-events-none'}`}>
+        <nav className="flex flex-col p-8 space-y-6 text-center border-t border-gray-100">
+          <Link href="/" onClick={closeMenu} className="text-gray-900 font-semibold text-lg hover:text-blue-600">Início</Link>
+          <Link href="aparelhos" onClick={closeMenu} className="text-gray-900 font-semibold text-lg hover:text-blue-600">Aparelhos Auditivos</Link>
+          <Link href="sobre" onClick={closeMenu} className="text-gray-900 font-semibold text-lg hover:text-blue-600">Sobre</Link>
+          <Link href="contato" onClick={closeMenu} className="bg-blue-600 text-white font-bold py-3 rounded-md shadow-md">Fale Conosco</Link>
         </nav>
       </div>
     </header>
